@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,9 +8,11 @@ using UnityEngine.SceneManagement;
 public class Controlador_MenuInicial : MonoBehaviour
 {
     [Tooltip("Anexar os menus inicias do jogo para funcionamento da scene Menu_Inicial")]
-    public GameObject Menu_Inicial,
-                      Menu_Config;
+    [SerializeField] private GameObject Menu_Inicial,
+                                        Menu_Config;
 
+    [Tooltip("Nome da fase que deve ser iniciar atualmente")]
+    [SerializeField] private String Nome_Fase;
     public void Start()
     {
         Menu_Inicial.SetActive(true);
@@ -28,11 +31,12 @@ public class Controlador_MenuInicial : MonoBehaviour
     }
     public void Iniciar()
     {
-
+        SceneManager.LoadScene(Nome_Fase);
     }
 
     public void Sair_Jogo()
     {
-    
+        Debug.Log("Saindo");
+        Application.Quit();
     }
 }
