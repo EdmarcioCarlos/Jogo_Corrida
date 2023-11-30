@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Controlador_MenuInicial : MonoBehaviour
 {
@@ -11,9 +10,8 @@ public class Controlador_MenuInicial : MonoBehaviour
     [SerializeField] private GameObject Menu_Inicial,
                                         Menu_Config;
 
-    [Tooltip("Nome da fase que deve ser iniciar atualmente")]
-    [SerializeField] private String Nome_Fase;
-    public void Start()
+    [SerializeField] private GameObject Controlador_TelaLoade;
+    public void Awake()
     {
         Menu_Inicial.SetActive(true);
         Menu_Config.SetActive(false);
@@ -29,11 +27,11 @@ public class Controlador_MenuInicial : MonoBehaviour
         Menu_Config.SetActive(false);
         Menu_Inicial.SetActive(true);
     }
+
     public void Iniciar()
     {
-        SceneManager.LoadScene(Nome_Fase);
+        Controlador_TelaLoade.GetComponent<Load_Scene>().Carregar_Scene();
     }
-
     public void Sair_Jogo()
     {
         Debug.Log("Saindo");
