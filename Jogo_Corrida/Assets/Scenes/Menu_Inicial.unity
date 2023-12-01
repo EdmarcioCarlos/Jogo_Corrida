@@ -795,7 +795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &360823057
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1235,7 +1235,7 @@ RectTransform:
   m_Father: {fileID: 736805944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1682,8 +1682,8 @@ RectTransform:
   m_Children:
   - {fileID: 1337757799}
   - {fileID: 58878196}
-  - {fileID: 360823057}
   - {fileID: 416670876}
+  - {fileID: 360823057}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2372,7 +2372,6 @@ GameObject:
   - component: {fileID: 1253229215}
   - component: {fileID: 1253229214}
   - component: {fileID: 1253229216}
-  - component: {fileID: 1253229217}
   m_Layer: 0
   m_Name: Controlador_Menu
   m_TagString: Untagged
@@ -2394,7 +2393,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Menu_Inicial: {fileID: 58878195}
   Menu_Config: {fileID: 416670875}
-  Controlador_TelaLoade: {fileID: 360823056}
+  Controlador_TelaLoad: {fileID: 360823056}
+  Nome_Fase: Pista01
+  Barra_Load: {fileID: 213501905}
+  "Texto_Progress\xE3o": {fileID: 1474099066}
 --- !u!4 &1253229215
 Transform:
   m_ObjectHideFlags: 0
@@ -2423,23 +2425,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Musica: {fileID: 1337757800}
---- !u!114 &1253229217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253229213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d63211ffdaf09ae4d979ac16bb6b9a8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Painel_Tela_Load: {fileID: 360823056}
-  Painel_Menu_Inicial: {fileID: 58878195}
-  Nome_Fase: Pista01
-  Barra_Load: {fileID: 213501905}
-  "Texto_Progress\xE3o": {fileID: 1474099066}
 --- !u!1 &1337757798
 GameObject:
   m_ObjectHideFlags: 0
@@ -3152,7 +3137,7 @@ RectTransform:
   m_Father: {fileID: 353469978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
